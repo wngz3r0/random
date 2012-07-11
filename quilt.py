@@ -13,7 +13,7 @@ squareSize = 4 # How big the squares are when measuring variance
 # Define the colors (because what fun is it without real colors?)
 blues = ['Turqoise', 'Cobalt', 'Azure']
 purples = ['Violet', 'Brinjal', 'Lavender']
-blacks = ['Midnight', 'Charcoal', 'Gothic']
+blacks = ['Midnight', 'Charcoal', 'Gothic', 'Imperial']
 
 # Create a set containing all the possible blocks
 primaryColors = blues
@@ -85,8 +85,10 @@ def GetVariance(square):
             blackCounts[0] += 1
         elif block[1] == "Charcoal":
             blackCounts[1] += 1
-        else:
+        elif block[1] == "Gothic":
             blackCounts[2] += 1
+        else:
+            blackCounts[3] += 1
 
     # First, get the variance of each color group
     blueVar = GetColorVariance(blueCounts, numBlues)
@@ -128,17 +130,6 @@ def GetValidArrangement(blocks):
         if data == (0, 0):
             continue
         return (blocks, data)
-
-def PrettyPrint(blocks):
-    print(blocks)
-    row = []
-    for i in range(len(blocks)):
-        row.append(blocks[i])
-        if (i + 1) % width == 0:
-            print(row)
-            print("hi")
-            row[:] = []
-    return
 
 data = GetValidArrangement(blocks)
 row = []
