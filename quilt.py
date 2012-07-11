@@ -1,3 +1,4 @@
+import math
 import itertools
 import random
 width = 10 # The width of the quilt in blocks
@@ -40,14 +41,19 @@ def GetSquare(lst, x, y, width):
     return square
 
 def GetColorVariance(counts, numColor):
-    print (counts, numColor)
     if numColor == 0:
         return 0
     # Colors from lightest to darkest are varianceOfSameColors / 2 apart
-    modifier = [1 - ((1 - varianceOfSameColors) / 2), 1, 1 + ((1 + varianceOfSameColors) / 2)]
+    modifier = [1 - ((1 - varianceOfSameColors) / 2.0), 1, 1 + ((1 -varianceOfSameColors) / 2.0)]
     counts = [a * b for a, b in zip(counts, modifier)]
     mean = sum(counts) / numColor
-    return sum([(a - mean) ** 2 for a in counts]) / numColor
+    variance = sum([a * ((b - mean) ** 2) for a, b in zip(counts, modifier)]) / numColor
+    idealCounts = [math.floor(numColor / 2.0), 0, math.ceil(numColor / 2.0)]
+    idealCounts = [a * b for a, b in zip(idealCounts, modifier)]
+    idealMean = sum(idealCounts) / numColor
+    idealVariance = sum([a * ((b - idealMean) ** 2) for a, b in zip(idealCounts, modifier)]) / numColor
+    return variance / idealVariance
+
 
 def GetVariance(square):
     blackCounts = [0, 0, 0]
@@ -94,8 +100,6 @@ def GetVariance(square):
     colorVar = sum([(1 - mean) ** 2 for _ in range(count)]) / count
 
     # Average the variances together using the weights provided
-    print (blueVar, purpleVar, blackVar, colorVar)
-    input()
     return ((blueVar * varianceOfSameColors) + (purpleVar * varianceOfSameColors) + (blackVar * blackRatio) + colorVar) / 4
 
 def TestArrangement(blocks):
@@ -105,7 +109,6 @@ def TestArrangement(blocks):
     for i in range(0, width - squareSize + 1):
         for j in range(0, height - squareSize + 1):
             variance = GetVariance(GetSquare(blocks, i, j, width))
-            print(variance)
             if variance > maxLikeness:
                 return (0,0)
             maxVariance = max(maxVariance, variance)
@@ -126,9 +129,27 @@ def GetValidArrangement(blocks):
             continue
         return (blocks, data)
 
-data = GetValidArrangement(blocks)
-print (data)
+def PrettyPrint(blocks):
+    print(blocks)
+    row = []
+    for i in range(len(blocks)):
+        row.append(blocks[i])
+        if (i + 1) % width == 0:
+            print(row)
+            print("hi")
+            row[:] = []
+    return
 
+data = GetValidArrangement(blocks)
+row = []
+for i in range(len(data[0])):
+    row.append(data[0][i])
+    if (i + 1) % width == 0:
+        print(row)
+        row[:] = []
+print("Average variance is ", data[1][0])
+output = "The max variance for a square of size " + repr(squareSize) + " is"
+print(output, data[1][1])
 
 
 
