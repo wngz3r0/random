@@ -1,0 +1,12 @@
+[('Cobalt', 'Charcoal'), ('Cobalt', 'Charcoal'), ('Violet', 'Charcoal'), ('Turqoise', 'Charcoal'), ('Azure', 'Gothic'), ('Lavender', 'Charcoal'), ('Brinjal', 'Gothic'), ('Violet', 'Midnight'), ('Turqoise', 'Midnight'), ('Lavender', 'Gothic')]
+[('Azure', 'Charcoal'), ('Cobalt', 'Midnight'), ('Lavender', 'Gothic'), ('Cobalt', 'Charcoal'), ('Violet', 'Gothic'), ('Violet', 'Gothic'), ('Brinjal', 'Midnight'), ('Brinjal', 'Midnight'), ('Brinjal', 'Gothic'), ('Azure', 'Gothic')]
+[('Cobalt', 'Gothic'), ('Cobalt', 'Gothic'), ('Brinjal', 'Charcoal'), ('Violet', 'Gothic'), ('Turqoise', 'Midnight'), ('Brinjal', 'Charcoal'), ('Lavender', 'Gothic'), ('Azure', 'Charcoal'), ('Cobalt', 'Charcoal'), ('Violet', 'Gothic')]
+[('Violet', 'Midnight'), ('Lavender', 'Charcoal'), ('Turqoise', 'Charcoal'), ('Turqoise', 'Midnight'), ('Turqoise', 'Charcoal'), ('Turqoise', 'Gothic'), ('Lavender', 'Midnight'), ('Azure', 'Charcoal'), ('Turqoise', 'Charcoal'), ('Violet', 'Charcoal')]
+[('Azure', 'Midnight'), ('Turqoise', 'Midnight'), ('Lavender', 'Midnight'), ('Cobalt', 'Midnight'), ('Azure', 'Midnight'), ('Lavender', 'Charcoal'), ('Violet', 'Charcoal'), ('Cobalt', 'Charcoal'), ('Brinjal', 'Charcoal'), ('Brinjal', 'Midnight')]
+[('Cobalt', 'Charcoal'), ('Violet', 'Charcoal'), ('Cobalt', 'Gothic'), ('Brinjal', 'Charcoal'), ('Turqoise', 'Gothic'), ('Azure', 'Charcoal'), ('Cobalt', 'Gothic'), ('Turqoise', 'Gothic'), ('Cobalt', 'Midnight'), ('Lavender', 'Midnight')]
+[('Azure', 'Charcoal'), ('Violet', 'Midnight'), ('Turqoise', 'Charcoal'), ('Lavender', 'Charcoal'), ('Azure', 'Midnight'), ('Turqoise', 'Charcoal'), ('Brinjal', 'Midnight'), ('Cobalt', 'Gothic'), ('Cobalt', 'Midnight'), ('Azure', 'Midnight')]
+[('Azure', 'Gothic'), ('Brinjal', 'Charcoal'), ('Turqoise', 'Gothic'), ('Violet', 'Midnight'), ('Turqoise', 'Gothic'), ('Lavender', 'Gothic'), ('Turqoise', 'Gothic'), ('Brinjal', 'Gothic'), ('Brinjal', 'Gothic'), ('Azure', 'Gothic')]
+[('Turqoise', 'Midnight'), ('Azure', 'Gothic'), ('Cobalt', 'Midnight'), ('Lavender', 'Midnight'), ('Cobalt', 'Gothic'), ('Brinjal', 'Midnight'), ('Violet', 'Charcoal'), ('Violet', 'Midnight'), ('Azure', 'Gothic'), ('Lavender', 'Gothic')]
+[('Lavender', 'Midnight'), ('Violet', 'Midnight'), ('Azure', 'Midnight'), ('Lavender', 'Charcoal'), ('Azure', 'Charcoal'), ('Azure', 'Midnight'), ('Turqoise', 'Midnight'), ('Cobalt', 'Midnight'), ('Brinjal', 'Gothic'), ('Violet', 'Gothic')]
+Average variance is  0.45511479903425706
+The max variance for a square of size 4 is 0.5438865764240861
